@@ -1,0 +1,108 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+
+  .homepage {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+
+  .posts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .post {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .post:hover {
+    transform: translateY(-5px);
+  }
+  
+
+  .post-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .post-header h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .post-header p {
+    font-size: 0.9rem;
+    color: #888;
+  }
+  
+ 
+  .post p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 15px 0;
+  }
+  
+
+  .post-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 15px;
+  }
+  
+
+  .post-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #555;
+  }
+
+  .post-image {
+    width: 100%; 
+    max-width: 400px;
+    height: auto;
+    margin-top: 10px; 
+    border-radius: 8px; 
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto; 
+  }
+  
+  .post-footer p {
+    margin: 0;
+  }
+  
