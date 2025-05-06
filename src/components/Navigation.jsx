@@ -19,7 +19,7 @@ function Navigation() {
       <nav>
         <ul className="nav-links">
           <li>
-            <NavLink to="/" className="nav-link">HomePage</NavLink>
+            <NavLink to="/" className="nav-link">Feed</NavLink>
           </li>
           <li><NavLink to="/recommend" className="nav-link"> Movie Recommendation</NavLink></li>
         <li><NavLink to="/about" className="nav-link">About</NavLink></li>
