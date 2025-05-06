@@ -1,15 +1,15 @@
-import express from "express";
-import path from "path";
+import express from 'express';
+import path from 'path';
 
 const app = express();
-const PORT = process.env.PORT || 3000; // Use the PORT environment variable or fallback to 3000
+const PORT = process.env.PORT || 3000;  // Always use process.env.PORT for Render
 
-// Serve static files from the 'dist' directory (build folder)
-app.use(express.static(path.join(__dirname, "dist")));
+// Serve static files from the 'dist' directory (created by vite build)
+app.use(express.static(path.join(__dirname, 'dist')));
 
-// Catch-all route to serve the index.html for single-page applications (SPA)
-app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "dist", "index.html"));
+// Catch-all route to serve index.html for any URL (Single Page Application)
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
 });
 
 app.listen(PORT, () => {
