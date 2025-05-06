@@ -1,36 +1,62 @@
-.bored-page {
+.trivia-page {
+    max-width: 600px;
+    margin: auto;
+    padding: 2rem;
     text-align: center;
-    padding: 40px;
+  }
+
+ 
+  
+  button:hover {
+    background-color: #0056b3;
   }
   
-  .bored-btn {
-    background-color: #5f9ea0;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    margin: 20px 0;
-    transition: background-color 0.3s ease;
-  }
-  
-  .bored-btn:hover {
-    background-color: #4e8b8d;
-  }
-  
-  .iss-card {
-    margin-top: 20px;
+  .trivia-question {
+    margin-top: 2rem;
+    padding: 1rem;
     background-color: #f4f4f4;
     border-radius: 10px;
-    padding: 20px;
-    display: inline-block;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
   
-  .error {
-    color: red;
+  .trivia-question h3 {
+    font-size: 1.2rem;
     font-weight: bold;
+  }
+  
+  .trivia-question ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .trivia-question ul li {
+    padding: 0.5rem;
+    background-color: #eaeaea;
+    border-radius: 5px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  ul li:hover {
+    background-color: #d4d4d4;
+  }
+  
+  ul li.correct {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  ul li.incorrect {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  p.correct {
+    color: green;
+  }
+  
+  p.incorrect {
+    color: red;
   }
   
