@@ -40,13 +40,13 @@ h1 {
 
 .login-form input:focus {
     outline: none;
-    border-color: #007bff;
+    border-color: #5F9EA0;
 }
 
 .login-form button {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
+    background-color:#5F9EA0;
     color: white;
     border: none;
     border-radius: 4px;
@@ -55,7 +55,7 @@ h1 {
 }
 
 .login-form button:hover {
-    background-color: #0056b3;
+    background-color: #5F9EA0;
 }
 
 .error {

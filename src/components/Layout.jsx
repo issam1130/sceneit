@@ -7,7 +7,7 @@ function Layout() {
     <div className="layout">
       <header>
       
-        <h1>Rear-view.</h1>
+      
       
         <Navigation />
      

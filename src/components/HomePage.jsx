@@ -1,51 +1,49 @@
-import React, { useState } from 'react';
-import { posts } from './posts'; 
+import React, { useState, useEffect, useContext } from 'react';
+import { posts as staticPosts } from './posts'; // Ensure posts is imported correctly
 import './HomePage.css';
+import CreatePost from './CreatePost';
+import { UserContext } from '../Contexts/UserContext'; // Add this import
+import Post from './Post'; // Make sure to import the Post component
 
 function HomePage() {
-  return (
-    <div className="homepage">
-      <h1>Feed</h1>
+  const [localPosts, setLocalPosts] = useState([]);
+  const { user } = useContext(UserContext); // Access the user context
 
-      <div className="posts">
-        {posts.map((post) => (
-          <Post key={post.id} post={post} />
-        ))}
-      </div>
-    </div>
-  );
-}
+  useEffect(() => {
+    const stored = localStorage.getItem('sceneit_posts');
+    if (stored) setLocalPosts(JSON.parse(stored));
+  }, []);
 
-function Post({ post }) {
+  const handleAddPost = (newPosts) => {
+    setLocalPosts(newPosts);
+  };
 
-  const [likes, setLikes] = useState(post.likes);
-
- 
-  const handleLike = () => {
-    setLikes(likes + 1);
+  const handleDeletePost = (postId) => {
+    const updatedPosts = localPosts.filter((post) => post.id !== postId);
+    localStorage.setItem('sceneit_posts', JSON.stringify(updatedPosts));
+    setLocalPosts(updatedPosts);
   };
 
   return (
-    <div className="post">
-   
-      <div className="post-header">
-        <img src={post.profilePicture} alt={`${post.username}'s profile`} className="profile-picture" />
-        <div>
-          <h2>{post.username}</h2>
-          <p>{post.timestamp}</p>
-        </div>
-      </div>
+    <div className="homepage">
+      <h1>Feed</h1>
+      <CreatePost onAddPost={handleAddPost} />
 
-      <p>{post.content}</p>
+      <div className="posts">
+        {localPosts.length > 0 &&
+          localPosts.map((post) => (
+            <Post
+              key={post.id}
+              post={post}
+              onDelete={handleDeletePost}
+              isUserPost={post.username === user?.username}
+            />
+          ))}
 
-   
-      <img src={post.image} alt="Post content" className="post-image" />
-
-   
-      <div className="post-footer">
-        <button onClick={handleLike}>Like</button>
-        <p>{likes} Likes</p>
-        <p>{post.comments} Comments</p>
+        {staticPosts.length > 0 &&
+          staticPosts.map((post) => (
+            <Post key={`static-${post.id}`} post={post} />
+          ))}
       </div>
     </div>
   );

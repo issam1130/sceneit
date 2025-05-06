@@ -1,39 +1,67 @@
 .navigation {
-  background-color: black;
-  padding: 10px 20px;
-  color: white;
+  background-color: #FAF9F6;
+  padding: 20px 40px;
+  color: #1A1A1A;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
-.navigation ul {
+.logo-link {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.logo-link:hover {
+  background-color: #5F9EA0; /* Updated color */
+}
+
+.logo img {
+  height: 70px;
+  width: auto;
+  display: block;
+}
+
+.nav-links {
   display: flex;
+  justify-content: center; /* Centers the navigation links */
+  flex: 1; /* This makes sure the center takes available space */
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.navigation li {
+.nav-links li {
   margin: 0 20px;
 }
 
-.navigation a {
-  color: white;
+.nav-link {
+  color: #1A1A1A;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
-  padding: 10px;
+  padding: 10px 15px;
   border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.navigation a:hover {
-  color: #f0f0f0;
-  background-color: #555;
+.nav-link:hover {
+  color: #FAF9F6;
+  background-color: #5F9EA0; /* Updated color */
 }
 
+.profile-login {
+  display: flex;
+  align-items: center;
+}
 
-.navigation a.active {
-  color: black;
-  background-color: yellow;
+.user-profile-pic {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #5F9EA0; /* Updated color */
 }

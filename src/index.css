@@ -1,0 +1,62 @@
+/* index.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #FAF9F6;
+    color: #1A1A1A;
+  }
+  
+  a {
+    color: #1A1A1A;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #5C6DCC;
+  }
+  
+  button {
+    background-color: #CDBA96;
+    color: #1A1A1A;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #bca87f;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #1A1A1A;
+    font-size: 16px;
+  }
+  
+  label {
+    font-weight: bold;
+    color: #5F9EA0;
+  }
+  
+  .error {
+    color: red;
+    margin-top: 10px;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #1A1A1A;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
