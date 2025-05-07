@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { UserContext } from "../Contexts/UserContext";
 import { getStoredPosts } from "../utils/storage";
-import Post from "./Post"; // Import the Post component
+import Post from "./Post"; 
 import './Profile.css';
 
 function Profile() {
@@ -43,7 +43,7 @@ function Profile() {
                 key={post.id}
                 post={post}
                 onDelete={handleDeletePost}
-                isUserPost={true} // all posts here belong to user
+                isUserPost={true} 
               />
             ))
           ) : (

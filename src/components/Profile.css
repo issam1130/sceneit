@@ -49,3 +49,28 @@ width: 1200px;
 .logout-btn:hover {
   background-color: #eaeaea;
 }
+
+@media (max-width: 768px) {
+  .profile-content {
+    width: 90%; 
+    padding: 15px;
+  }
+
+  .profile-header h1 {
+    font-size: 24px;
+  }
+
+  .profile-picture-large {
+    width: 80px;
+    height: 80px;
+  }
+
+  .logout-footer {
+    padding: 15px;
+  }
+
+  .logout-btn {
+    width: 100%;
+    font-size: 16px;
+  }
+}
