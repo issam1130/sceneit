@@ -1,12 +1,12 @@
 import React, { createContext, useState, useEffect } from "react";
-import users from "./data.js"; // Ensure this is pointing to the correct users data file
+import users from "./data.js"; 
 
 export const UserContext = createContext();
 
 function UserContextProvider({ children }) {
   const [user, setUser] = useState(null);
 
-  // Check for saved user data in localStorage on app load
+
   useEffect(() => {
     const savedUser = JSON.parse(localStorage.getItem("user"));
     if (savedUser) {

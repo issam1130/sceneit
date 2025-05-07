@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { posts as staticPosts } from './posts'; // Ensure posts is imported correctly
+import { posts as staticPosts } from './posts'; 
 import './HomePage.css';
 import CreatePost from './CreatePost';
-import { UserContext } from '../Contexts/UserContext'; // Add this import
-import Post from './Post'; // Make sure to import the Post component
+import { UserContext } from '../Contexts/UserContext'; 
+import Post from './Post'; 
 
 function HomePage() {
   const [localPosts, setLocalPosts] = useState([]);
-  const { user } = useContext(UserContext); // Access the user context
+  const { user } = useContext(UserContext); 
 
   useEffect(() => {
     const stored = localStorage.getItem('sceneit_posts');

@@ -10,13 +10,13 @@ function Login() {
   });
   const [error, setError] = useState(""); 
 
-  const { user, handleLogin } = useContext(UserContext); // Correctly using handleLogin from context
+  const { user, handleLogin } = useContext(UserContext); 
   const navigate = useNavigate();
 
   useEffect(() => {
     if (user) {
       setLoginData({ username: "", password: "" });
-      navigate(`/users/${user.id}`); // Redirect to the user's profile if logged in
+      navigate(`/users/${user.id}`);
     }
   }, [user, navigate]);
 
@@ -27,7 +27,7 @@ function Login() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    console.log("Submitting login data:", loginData); // Log data being submitted
+    console.log("Submitting login data:", loginData); 
 
     const isValid = handleLogin(loginData);
 

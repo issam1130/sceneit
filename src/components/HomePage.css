@@ -11,18 +11,18 @@ body {
 }
 
 
-/* Wrapper for entire content */
+
 .app-container {
-  background-color: #5F9EA0; /* Muted Teal background behind all sections */
-  min-height: 100vh; /* Full viewport height */
+  background-color: #5F9EA0; 
+  min-height: 100vh; 
 }
 
-/* Main content area for homepage */
+
 .homepage {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #fff; /* White background for the content itself */
+  background-color: #fff; 
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -212,7 +212,7 @@ h1 {
 
 .nav-link:hover {
   color: #FAF9F6;
-  background-color: #4c8b8f; /* Darker Teal */
+  background-color: #4c8b8f; 
 }
 
 .logo img {
@@ -221,7 +221,7 @@ h1 {
   display: block;
 }
 
-/* Logo hover effect */
+
 .logo-link {
   display: inline-block;
   padding: 10px;

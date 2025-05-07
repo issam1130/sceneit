@@ -19,8 +19,8 @@ export default function TriviaPage() {
 
       if (data.results) {
         setQuestions(data.results);
-        setUserAnswer(null);  // Reset the selected answer when a new question is loaded
-        setIsAnswered(false); // Reset the answer status
+        setUserAnswer(null);  
+        setIsAnswered(false); 
       } else {
         setError("No trivia questions found.");
       }
@@ -50,7 +50,7 @@ export default function TriviaPage() {
 
   return (
     <div className="trivia-page">
-      <h1>🎮 Trivia Time!</h1>
+      <h1>Bored? Try and answer these trivial questions:</h1>
       <button onClick={fetchTriviaQuestions}>Get Trivia Question</button>
 
       {loading && <p>Loading trivia question...</p>}
