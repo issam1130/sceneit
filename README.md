@@ -4,10 +4,10 @@
 ## SceneIt Web App Screenshots
 
 ### Desktop View
-![Desktop View](./assets/desktop.png)
+![Desktop View](./public/desktop.png)
 
 ### Mobile View
-![Mobile View](./assets/mobile.png)
+![Mobile View](./public/mobile.png)
 
 
 **SceneIt** is a movie review and recommendation web app built using **React**. It allows users to create posts, share movie reviews, and get movie recommendations. The app is **fully responsive**, making it accessible on both **desktop** and **mobile** devices.
